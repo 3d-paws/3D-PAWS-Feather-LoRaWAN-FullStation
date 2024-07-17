@@ -1,5 +1,5 @@
 #define COPYRIGHT "Copyright [2024] [University Corporation for Atmospheric Research]"
-#define VERSION_INFO "FSLW-240610"  // Full Station LoRaWAN- Release Date
+#define VERSION_INFO "FSLW-240717"  // Full Station LoRaWAN- Release Date
 
 /*
  *======================================================================================================================
@@ -23,6 +23,7 @@
  *           2024-06-10 RJB Modified SF.h - isValidHexString(), hexStringToUint32(), SDC.h - SD_findKey()
  *                          Added HI, WBT, WBGT
  *           2024-06-23 RJB Copyright Added
+ *           2024-07-17 RJB Removed #include <ArduinoLowPower.h> not needed
  *
  *  Compile for EU Frequencies 
  *    cd Arduino/libraries/MCCI_LoRaWAN_LMIC_library/project_config
@@ -41,7 +42,6 @@
  */
 #include <SPI.h>
 #include <Wire.h>
-#include <ArduinoLowPower.h>
 #include <SD.h>
 #include <ctime>                // Provides the tm structure
 #include <Adafruit_Sensor.h>
