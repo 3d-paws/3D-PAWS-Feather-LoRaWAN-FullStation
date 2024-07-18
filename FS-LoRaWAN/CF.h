@@ -43,11 +43,11 @@
  # Options 0,1
  15m_enable=0
 
- # Rain Gauge rg1 pin A2
+ # Rain Gauge rg1 pin A3
  # Options 0,1
  rg1_enable=0
 
- # Rain Gauge rg2 pin A3
+ # Rain Gauge rg2 pin A4
  # Options 0,1
  rg2_enable=0
 

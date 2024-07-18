@@ -1,5 +1,5 @@
 #define COPYRIGHT "Copyright [2024] [University Corporation for Atmospheric Research]"
-#define VERSION_INFO "FSLW-240717"  // Full Station LoRaWAN- Release Date
+#define VERSION_INFO "FSLW-240718"  // Full Station LoRaWAN- Release Date
 
 /*
  *======================================================================================================================
@@ -24,6 +24,7 @@
  *                          Added HI, WBT, WBGT
  *           2024-06-23 RJB Copyright Added
  *           2024-07-17 RJB Removed #include <ArduinoLowPower.h> not needed
+ *           2024-07-18 RJB Pin changes A2 Wind, A3 RG1, A4 RG2, A5, Distance
  *
  *  Compile for EU Frequencies 
  *    cd Arduino/libraries/MCCI_LoRaWAN_LMIC_library/project_config
@@ -94,23 +95,6 @@
  * 
  * Board Label   Arduino  Info & Usage                   Grove Shield Connector   
  * ======================================================================================================================
- * RST
- * 3V            3v3 Power
- * ARef
- * GND
- * A0            A0       WatchDog Trigger               Grove A0
- * A1            A1       WatchDog Heartbeat             Grove A0
- * A2            A2       Interrupt For Rain Gauge 2     Grove A2
- * A3            A3       Interrupt For Rain Gauge 1     Grove A2
- * A4            A4       Interrupt For Anemometer       Grove A4
- * A5            A5       Distance Sensor or Other       Grove A4
- * SCK           SCK      SPI0 Clock                     Not on Grove               
- * MOS           MOSI     Used by SD Card                Not on Grove
- * MIS           MISO     Used by SDCard                 Not on Grove
- * RX0           D0                                      Grove UART
- * TX1           D1                                      Grove UART 
- * io1           DIO1     Connects to D6 for LoRaWAN     Not on Grove (Particle Pin D9)
-   
  * BAT           VBAT Power
  * En            Control - Connect to ground to disable the 3.3v regulator
  * USB           VBUS Power
@@ -122,7 +106,25 @@
  * 6             D6       Connects to DIO1 for LoRaWAN   Grove D2  (Particle Pin D3)
  * 5             D5                                      Grove D2  (Particle Pin D2)
  * SCL           D3       i2c Clock                      Grove I2C_1
- * SDA           D2       i2c Data                       Grove I2C_1
+ * SDA           D2       i2c Data                       Grove I2C_1 
+ * RST
+ 
+ * 3V            3v3 Power
+ * ARef
+ * GND
+ * A0            A0       WatchDog Trigger               Grove A0
+ * A1            A1       WatchDog Heartbeat             Grove A0
+ * A2            A2       Interrupt For Anemometer       Grove A2
+ * A3            A3       Interrupt For Rain Gauge 1     Grove A2
+ * A4            A4       Interrupt For Rain Gauge 2     Grove A4
+ * A5            A5       Distance Sensor                Grove A4
+ * SCK           SCK      SPI0 Clock                     Not on Grove               
+ * MOS           MOSI     Used by SD Card                Not on Grove
+ * MIS           MISO     Used by SDCard                 Not on Grove
+ * RX0           D0                                      Grove UART
+ * TX1           D1                                      Grove UART 
+ * io1           DIO1     Connects to D6 for LoRaWAN     Not on Grove (Particle Pin D9)
+   
  * 
  * Not exposed on headers
  * D8 = LoRa NSS aka Chip Select CS

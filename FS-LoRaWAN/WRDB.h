@@ -12,7 +12,7 @@ void HeartBeat(); // Prototype this function to aviod compile function unknown i
  * ======================================================================================================================
  */
 #define RAINGAUGE1_IRQ_PIN  A3
-#define RAINGAUGE2_IRQ_PIN  A2
+#define RAINGAUGE2_IRQ_PIN  A4
 
 /*
  * ======================================================================================================================
@@ -83,7 +83,7 @@ void raingauge2_interrupt_handler()
  *          Wind Gust Direction = Average of the 3 Vectors from the Wind Gust samples.
  * ======================================================================================================================
  */
-#define ANEMOMETER_IRQ_PIN  A5
+#define ANEMOMETER_IRQ_PIN  A2
 #define WIND_READINGS       60       // One minute of 1s Samples
 
 typedef struct {
